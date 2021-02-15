@@ -9,6 +9,10 @@ jobs:
     steps:
       - checkout
 
+      -run:
+        name: install nokogiri
+        command: gem install nokogiri -v '1.10.10' --source 'https://rubygems.org/'
+
       - run:
           name: build dependencies
           command: bundle install
